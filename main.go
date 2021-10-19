@@ -51,7 +51,7 @@ func main() {
 
 	for y := 0; y < winHeight; y++ {
 		for x := 0; x < winWidth; x++ {
-			setPixel(x, y, color{byte(x % 255), byte(y % 255), 0}, pixels)
+			setPixel(x, y, color{0, byte(y / 4), 0}, pixels)
 		}
 	}
 	tex.Update(nil, pixels, winWidth*4)
@@ -60,5 +60,3 @@ func main() {
 
 	sdl.Delay(2000)
 }
-
-
